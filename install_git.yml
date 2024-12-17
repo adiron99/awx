@@ -1,0 +1,13 @@
+--- 
+- name: install git
+  hosts: all
+  become: yes
+  tasks:
+    - name: update package cache
+      yum:
+        name: "*"
+        state: latest
+    - name: install git
+      yum:
+        name: git
+        state: present

@@ -1,0 +1,14 @@
+--- 
+- name: install multiple packages
+  hosts: all
+  become: true
+  tasks:
+    - name: install multiple packages
+      package:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - vim
+        - git
+        - curl
+        - htop

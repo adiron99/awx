@@ -7,8 +7,6 @@
       yum:
         name: nginx
         state: present
-      vars:
-        ansible_python_interpreter: /usr/bin/python2
       
  
     - name: start and enable ngnix service

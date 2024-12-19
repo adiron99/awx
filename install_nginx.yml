@@ -1,12 +1,15 @@
 - name: install ngnix
   hosts: all
   become: yes
+  vars:
+    ansible_python_interpreter: /usr/bin/python2
   tasks:
  
     - name: install ngnix
       yum:
        name: nginx
        state: present
+      
  
     - name: start and enable ngnix service
       service:

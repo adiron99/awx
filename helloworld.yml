@@ -1,0 +1,9 @@
+- name: Hello World Print
+  hosts: localhost
+  become: true
+  gather_facts: no
+
+  tasks:
+    - name: debug ansible facts
+      debug:
+        msg: "hello world"

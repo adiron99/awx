@@ -1,0 +1,12 @@
+---   
+- name: installing multiple packages
+  hosts: localhost
+  become: true
+  tasks:
+    - name: installing multiple packages
+      yum:
+       state: present
+       name:
+               - git
+               - docker
+               - httpd

@@ -1,0 +1,11 @@
+---   
+- name: creating a file
+  hosts: localhost
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: ensure the file exists
+      ansible.builtin.file:
+        path: "/home/ec2-user/file.txt"
+        state: touch

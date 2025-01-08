@@ -1,5 +1,5 @@
 - name: Hello World Print
-  hosts: localhost
+  hosts: all
   become: true
   gather_facts: no
 

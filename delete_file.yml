@@ -1,6 +1,6 @@
 ---   
 - name: deleting a file
-  hosts: localhost
+  hosts: all
   become: true
   tasks:
     - name: deleting a file

@@ -1,6 +1,6 @@
 ---   
 - name: creating a file
-  hosts: localhost
+  hosts: all
   user: ansible
   become: yes
   connection: ssh

@@ -1,6 +1,6 @@
 ---   
 - name: installing multiple packages
-  hosts: localhost
+  hosts: all
   become: true
   tasks:
     - name: installing multiple packages

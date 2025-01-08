@@ -1,0 +1,10 @@
+---   
+- name: creating a file
+  hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: Create file
+      ansible.builtin.command: "touch /home/ec2-user/file.txt"
+      register: file_created

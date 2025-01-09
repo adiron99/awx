@@ -1,0 +1,11 @@
+---   
+- name: installing httpd
+  hosts: all
+  become: true
+  tasks:
+    - name: installing httpd
+      action: yum name=httpd state=present
+      notify: starting httpd services
+  handlers:
+     - name: starting httpd serice
+       action: service name=httpd  state=started
